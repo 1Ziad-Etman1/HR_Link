@@ -4,20 +4,20 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form id="mainform2">
+    <form id="main-form2" action="home.html">
+    <div class="raw" class="box">
+        <label for="mail">Username: </label>
+        <input id="mail" type="email" required placeholder="Email Address">
+    </div>
 
-        <div class="raw">
-            <input id="mail" type="email" required placeholder="Email Adress">
-        </div>
+    <div class="raw" class="box">
+        <label for="id">Password: </label>
+        <input id="id" type="password" required placeholder="ID">
+    </div>
 
-        <div class="raw">
-            <input id="id" type="password" required placeholder="ID">
-        </div>
-
-    
-    <button type="button"><a href="home.html">Login</button>
+    <input type="submit" class = "log_button" value="Login">
     <br>
-    <button type="button"> <a href="create.html">Create New Account</button>
+    <button type="button" class = "log_button"> <a href="create.html">Create New Account</button>
     <br>
     <a href="forget_1.html">Forget password
     </form>
