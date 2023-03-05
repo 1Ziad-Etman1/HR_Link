@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        margin:20;
+        padding:20;
+        background-color: #f2f2f2;}
+        
+        * {box-sizing: border-box;}
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+            .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+            }
+
+            header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 36px;
+      }
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
+      }
+      article {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+        margin: 20px;
+        padding: 40px;
+        text-align: center;
+        width: 500px;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 20px;
+      }
+      button {
+        background-color: #333;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #555;
+      }
+
+
+      /* The popup form - hidden by default */
+        .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+        background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+        }
+        </style>
+        </head>
+
+        <body>
+            <header>
+                <h2>Add Employee</h2>
+              
+            </header>
+
+            <div class="form-popup" id="Add"></div>
+
+          
+
+                       
+
+            <br><br>  <label for="id">ID:</label>
+		<input type="text" id="id" name="id"><br><br>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br><br>
+
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address"><br><br>
+
+		<label for="phone">Phone Number:</label>
+		<input type="text" id="phone" name="phone"><br><br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br><br>
+
+		<label for="marital-status">Marital Status:</label>
+		<input type="radio" id="single" name="marital-status" value="single">
+		<label for="single">Single</label>
+		<input type="radio" id="married" name="marital-status" value="married">
+		<label for="married">Married</label><br><br>
+
+		<label for="available-vacation-days">Available Vacation Days:</label>
+		<input type="number" id="available-vacation-days" name="available-vacation-days"><br><br>
+
+		<label for="actual-approved-vacation-days">Actual Approved Vacation Days:</label>
+		<input type="number" id="actual-approved-vacation-days" name="actual-approved-vacation-days"><br><br>
+
+		<label for="salary">Salary:</label>
+		<input type="number" id="salary" name="salary"><br><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob"><br><br>
+
+        <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    
+  </form>
+</div>
+
+<script>
+    function addEmp() {
+      location.replace("Add.html")
+    }
+
+    function closeForm() {
+      document.getElementById("Add").style.display = "none";
+    }
+    </script>
+
+
+
+
+
+</body>
+</html>
