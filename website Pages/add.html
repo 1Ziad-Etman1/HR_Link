@@ -1,78 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Employee Management System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="add.css">
-        </head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Employee Management System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="add.css"> -->
+		<link rel="stylesheet" href="Authentication pages/nav bar/navBarStyle.css">
+		<link rel="stylesheet" href="Authentication pages/Login_Create.css">
+	</head>
 
-        <body>
-            <header>
-                <h2>Add Employee</h2>
-              
-            </header>
+	<body>
+		
+		<header class="header">
+			<img class="header-logo" src="" alt="logo">
+			<nav>
+				<ul class="nav-links">
+					<li class="header-lst-itm"><a class="header-link" href="Authentication pages/login.html">Services</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				</ul>
+			</nav>
+			<a class="cta header-link" href="Authentication pages/login.html"><button class="header-button1">Log out</button></a>
+			<div class="toggle-button">
+				<i class="fa-solid fa-bars"></i> 
+			</div>
+			<div class="dropdown-menu open">
+				<li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				<li class="header-lst-itm"><a class="cta header-link" href="Authentication pages/login.html"><button class="header-button2">Log out</button></a></li>
+			</div>
+		</header>   
 
-            <div class="form-popup" id="Add"></div>
-
-          
-
-                       
-
-            <br><br>  <label for="id">ID:</label>
-		<input type="text" id="id" name="id"><br><br>
-
-		<label for="name">Name:</label>
-		<input type="text" id="name" name="name"><br><br>
-
-		<label for="email">Email:</label>
-		<input type="email" id="email" name="email"><br><br>
-
-		<label for="address">Address:</label>
-		<input type="text" id="address" name="address"><br><br>
-
-		<label for="phone">Phone Number:</label>
-		<input type="text" id="phone" name="phone"><br><br>
-
-		<label for="gender">Gender:</label>
-		<input type="radio" id="male" name="gender" value="male">
-		<label for="male">Male</label>
-		<input type="radio" id="female" name="gender" value="female">
-		<label for="female">Female</label><br><br>
-
-		<label for="marital-status">Marital Status:</label>
-		<input type="radio" id="single" name="marital-status" value="single">
-		<label for="single">Single</label>
-		<input type="radio" id="married" name="marital-status" value="married">
-		<label for="married">Married</label><br><br>
-
-		<label for="available-vacation-days">Available Vacation Days:</label>
-		<input type="number" id="available-vacation-days" name="available-vacation-days"><br><br>
-
-		<label for="actual-approved-vacation-days">Actual Approved Vacation Days:</label>
-		<input type="number" id="actual-approved-vacation-days" name="actual-approved-vacation-days"><br><br>
-
-		<label for="salary">Salary:</label>
-		<input type="number" id="salary" name="salary"><br><br>
-
-		<label for="dob">Date of Birth:</label>
-		<input type="date" id="dob" name="dob"><br><br>
-
-        <button type="submit" class="btn">Add</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    
-  </form>
-</div>
+		<form class="create-form" method="post" action="login.html">
+			<h1>Add new Employee</h1>
+		
+			<div class="section">
+				<label for="txt"> Name: </label>
+				<input id="txt" type="text" required>
+			</div>
+	
+			<div class="section">
+				<label for="id"> ID:   </label>
+				<input id="id" type="password" required>
+			</div>
+	
+			<div class="section">
+				<label for="mail"> Email: </label>
+				<input id="mail" type="email" required>
+			</div>
+	
+			<div class="section">
+				<label for="adr"> Adress: </label>
+				<input id="adr" type="text" required>
+			</div>
+	
+			<div class="section">
+				<label for="pn"> Phone Number: </label>
+				<input id="pn" type="tel" required>
+			</div>
+			
+			<div class="section">
+			<label for="gender">Gender:</label>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male" >Male</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female" >Female</label>
+			</div>
+	
+			<div class="section">
+				<label for="vaca"> Number Of Available Vacation Days: </label>
+				<input id="vaca" type="number" min="0" max="7" required>
+			</div>
+	
+			<div class="section">
+				<label for="vac"> Number Of Actual Approved Vacation Days: </label>
+				<input id="vac" type="number" min="0" max="7" required>
+			</div>
+	
+			<div class="section">
+				<label for="sal"> Salary: </label>
+				<input id="sal" type="number" required>
+			</div>
+	
+			<div class="section">
+				<label for="birth"> Date of birth: </label>
+				<input id="birth" type="date" required>
+			</div>
+	
+			<div class="section">
+				<input class="submit" type="submit" value="Add">
+			</div>
+		</form>
+		
 
 <script>
-    function addEmp() {
-      location.replace("Add.html")
-    }
+	function addEmp() {
+		location.replace("Add.html")
+	}
 
-    function closeForm() {
-      document.getElementById("Add").style.display = "none";
-    }
-    </script>
+	function closeForm() {
+		document.getElementById("Add").style.display = "none";
+	}
+
+	const toggleBtn = document.querySelector('.toggle-button')
+	const toggleBtnIcon = document.querySelector('.toggle-button i')
+	const dropDownMenue = document.querySelector('.dropdown-menue')
+
+	toggleBtn.onclick = function () {
+		dropDownMenue.classList.toggle = 'open'
+		const isOpen = dropDownMenue.classList.contains('open')
+
+		toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+	}
+</script>
 
 
 

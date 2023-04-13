@@ -5,12 +5,31 @@
         <title>Employee Management System</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="home_pages.css">
+        <link rel="stylesheet" href="Authentication pages/nav bar/navBarStyle.css">
     </head>
 
     <body>
-        <header>
-            <h1>Employee Management System</h1>
-        </header>
+        <header class="header">
+			<img class="header-logo" src="" alt="logo">
+			<nav>
+				<ul class="nav-links">
+					<li class="header-lst-itm"><a class="header-link" href="Authentication pages/login.html">Services</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				</ul>
+			</nav>
+			<a class="cta header-link" href="Authentication pages/login.html"><button class="header-button1">Log out</button></a>
+			<div class="toggle-button">
+				<i class="fa-solid fa-bars"></i> 
+			</div>
+			<div class="dropdown-menu open">
+				<li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				<li class="header-lst-itm"><a class="cta header-link" href="Authentication pages/login.html"><button class="header-button2">Log out</button></a></li>
+			</div>
+		</header>   
+
 
         <button><a href="add.html"  target="_self" id="addemp"> Add Employee </a></button><br><br>
         <div class="form-popup" id="Add"></div>
