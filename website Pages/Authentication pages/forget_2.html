@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!-- <link rel="stylesheet" href="forget.css"> -->
+     <link rel="stylesheet" href="Login_Create.css">
+     <link rel="stylesheet" href="nav bar/navBarStyle.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password 2</title>
+</head>
+<body>
+
+    <header class="header">
+        <img class="header-logo" src="" alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <li class="header-lst-itm"><a class="header-link" href="login.html">Services</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta header-link" href="login.html"><button class="header-button1">Login</button></a>
+        <div class="toggle-button">
+            <i class="fa-solid fa-bars"></i> 
+        </div>
+        <div class="dropdown-menu open">
+            <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            <li class="header-lst-itm"><a class="cta header-link" href="#"><button class="header-button2">Contact</button></a></li>
+        </div>
+    </header>   
+
+
+    <form class="forget-form"  method="post" action="forget.html">
+        <h1>Check your email</h1>
+        <h3>We have sent a vertication code to your email</h3>
+
+        <div class="section">
+            <label for="VerCode">Enter the Verification code</label>
+            <input id = "VerCode" type = "text" name="VerCode" placeholder = ""/>
+        </div>
+
+        <input type="submit" class = "submit" value="submit">
+
+        <a class="forget-link" href="url">send again</a>
+        
+        <!-- <button onclick="showSpinner()">Reset Password</button> -->
+        <a class="forget-link" href="forget.html">Forget password</a>
+        </form>
+
+
+    <!--  for the header -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle-button')
+        const toggleBtnIcon = document.querySelector('.toggle-button i')
+        const dropDownMenue = document.querySelector('.dropdown-menue')
+
+        toggleBtn.onclick = function () {
+            dropDownMenue.classList.toggle = 'open'
+            const isOpen = dropDownMenue.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

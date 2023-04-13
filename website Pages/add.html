@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="add.css">
+        </head>
+
+        <body>
+            <header>
+                <h2>Add Employee</h2>
+              
+            </header>
+
+            <div class="form-popup" id="Add"></div>
+
+          
+
+                       
+
+            <br><br>  <label for="id">ID:</label>
+		<input type="text" id="id" name="id"><br><br>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br><br>
+
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address"><br><br>
+
+		<label for="phone">Phone Number:</label>
+		<input type="text" id="phone" name="phone"><br><br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br><br>
+
+		<label for="marital-status">Marital Status:</label>
+		<input type="radio" id="single" name="marital-status" value="single">
+		<label for="single">Single</label>
+		<input type="radio" id="married" name="marital-status" value="married">
+		<label for="married">Married</label><br><br>
+
+		<label for="available-vacation-days">Available Vacation Days:</label>
+		<input type="number" id="available-vacation-days" name="available-vacation-days"><br><br>
+
+		<label for="actual-approved-vacation-days">Actual Approved Vacation Days:</label>
+		<input type="number" id="actual-approved-vacation-days" name="actual-approved-vacation-days"><br><br>
+
+		<label for="salary">Salary:</label>
+		<input type="number" id="salary" name="salary"><br><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob"><br><br>
+
+        <button type="submit" class="btn">Add</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    
+  </form>
+</div>
+
+<script>
+    function addEmp() {
+      location.replace("Add.html")
+    }
+
+    function closeForm() {
+      document.getElementById("Add").style.display = "none";
+    }
+    </script>
+
+
+
+
+
+</body>
+</html>

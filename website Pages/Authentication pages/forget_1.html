@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <!-- <link rel="stylesheet" href="forget.css"> -->
+     <link rel="stylesheet" href="Login_Create.css">
+     <link rel="stylesheet" href="nav bar/navBarStyle.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password 1</title>
+</head>
+<body>
+
+    <header class="header">
+        <img class="header-logo" src="" alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <li class="header-lst-itm"><a class="header-link" href="login.html">Services</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta header-link" href="login.html"><button class="header-button1">Login</button></a>
+        <div class="toggle-button">
+            <i class="fa-solid fa-bars"></i> 
+        </div>
+        <div class="dropdown-menu open">
+            <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            <li class="header-lst-itm"><a class="cta header-link" href="#"><button class="header-button2">Contact</button></a></li>
+        </div>
+    </header>     
+
+
+
+    <form class="forget-form"  method="post" action="forget_2.html">
+        <h1 id = "Form-title">Forget Password</h1>
+        <div class = "section">
+            <label for="forget-password-email">Enter your registered email</label>
+            <input id ="forget-password-email" class = "Email" type = "email" placeholder = "Email Address"/>
+        </div>
+
+        <input type="submit" class = "submit" value="submit">
+
+            <!-- <button onclick="showSpinner()">Reset Password</button> -->
+            <a class="forget-link" href="forget_2.html">Forget password </a>
+    </form>
+
+
+</body>
+</html>

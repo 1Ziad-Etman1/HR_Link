@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Login_Create.css">
+        <link rel="stylesheet" href="nav bar/navBarStyle.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+
+        <header class="header">
+            <img class="header-logo" src="" alt="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li class="header-lst-itm"><a class="header-link" href="login.html">Services</a></li>
+                    <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+                    <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+                </ul>
+            </nav>
+            <a class="cta header-link" href="login.html"><button class="header-button1">Login</button></a>
+            <div class="toggle-button">
+                <i class="fa-solid fa-bars"></i> 
+            </div>
+            <div class="dropdown-menu open">
+                <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+                <li class="header-lst-itm"><a class="cta header-link" href="#"><button class="header-button2">Contact</button></a></li>
+            </div>
+        </header>   
+
+
+        <form class="login-form" action="home.html">
+            <div class="section" class="box">
+                <label for="mail">Username: </label>
+                <input id="mail" type="email" required placeholder="Email Address">
+            </div>
+
+            <div class="section" class="box">
+                <label for="id">Password: </label>
+                <input id="id" type="password" required placeholder="ID">
+            </div>
+
+            <input type="submit" class = "submit" value="Login">
+            <br>
+            <a class="create-link" href="create.html">Create New Account</a>
+            <br>
+            <a class="forget-link" href="forget_1.html">Forget password</a>
+        </form>
+    
+        <!--  for the header -->
+        <script>
+            const toggleBtn = document.querySelector('.toggle-button')
+            const toggleBtnIcon = document.querySelector('.toggle-button i')
+            const dropDownMenue = document.querySelector('.dropdown-menue')
+
+            toggleBtn.onclick = function () {
+                dropDownMenue.classList.toggle = 'open'
+                const isOpen = dropDownMenue.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>

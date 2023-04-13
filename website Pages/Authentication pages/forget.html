@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="forget.css"> -->
+    <link rel="stylesheet" href="Login_Create.css">
+    <link rel="stylesheet" href="nav bar/navBarStyle.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+</head>
+<body>
+
+    <header class="header">
+        <img class="header-logo" src="" alt="logo">
+        <nav>
+            <ul class="nav-links">
+                <li class="header-lst-itm"><a class="header-link" href="login.html">Services</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            </ul>
+        </nav>
+        <a class="cta header-link" href="login.html"><button class="header-button1">Login</button></a>
+        <div class="toggle-button">
+            <i class="fa-solid fa-bars"></i> 
+        </div>
+        <div class="dropdown-menu open">
+            <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+            <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+            <li class="header-lst-itm"><a class="cta header-link" href="#"><button class="header-button2">Contact</button></a></li>
+        </div>
+    </header>    
+
+
+    <form class="forget-form "  method="post" action="login.html">
+        <h1>Create new password</h1>
+        
+        <div class="section">
+            <label for="new-pass">Password</label>
+            <input id = "new-pass" type = "text" name="new-pass" placeholder = "new password"/>   
+        </div>
+
+        <div class="section">
+            <label for="confirm-new-pass">Confirm password</label>
+            <input id = "confirm-new-pass" type = "text" name="ConfNewPass" placeholder = "Confirm"/>
+        </div>
+
+        <div class="section">
+            <input class="submit" type="submit" value="submit">
+        </div>
+    
+    </form>
+
+
+
+    <!--  for the header -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle-button')
+        const toggleBtnIcon = document.querySelector('.toggle-button i')
+        const dropDownMenue = document.querySelector('.dropdown-menue')
+
+        toggleBtn.onclick = function () {
+            dropDownMenue.classList.toggle = 'open'
+            const isOpen = dropDownMenue.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

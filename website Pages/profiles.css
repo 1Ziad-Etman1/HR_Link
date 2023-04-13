@@ -1,0 +1,81 @@
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body.profile-body {
+	height: 190vh;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(#01012e,#572121);
+}
+
+header.profile-header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+.profile-header h1 {
+	margin: 0;
+	font-size: 36px;
+}
+
+main.profile-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 40px;
+}
+
+.data, .vac-info, .salary{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+	margin: 20px;
+	padding: 40px;
+	text-align: center;
+	width: 500px;
+	height: 530px;
+}
+
+.profile-main .salary {
+	height: 200px;
+	margin-top: -50px;
+}
+
+
+
+.profile-picture {
+	height: 200px;
+	margin-bottom: 20px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+.profile-main section .data-item {
+	margin: 20px 0;
+	font-size: 20px;
+}
+
+.edit-prof, .req-vac {
+	background-color: #333;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.edit-prof:hover, .req-vac:hover {
+	background-color: #555;
+}
