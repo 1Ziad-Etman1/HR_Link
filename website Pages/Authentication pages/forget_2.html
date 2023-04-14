@@ -8,32 +8,54 @@
      crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="stylesheet" href="Login_Create.css">
      <link rel="stylesheet" href="nav bar/navBarStyle.css">
+     <link rel="stylesheet" href="../side_nav_bar/sideNavBar.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forget Password 2</title>
 </head>
 <body>
 
+    <input type="checkbox" name="" id="check">
+    <label for="check">
+        <i class="fa-solid fa-bars" id="button"></i>        
+        <i class="fas fa-xmark" id="cancel"></i>
+    </label>
+    <div class="side-bar">
+        <header>
+            HR_Link
+        </header>
+        <ul>
+            <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+            <li><a href="#"><i class="fas fa-circle-question"></i>About</a></li>
+            <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Login</a></li>
+
+        </ul>
+    </div>
+
     <header class="header">
         <img class="header-logo" src="" alt="logo">
         <nav>
             <ul class="nav-links">
-                <li class="header-lst-itm"><a class="header-link" href="login.html">Services</a></li>
+                <li class="header-lst-itm"><a class="header-link" href="Authentication pages/login.html">Services</a></li>
                 <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
                 <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
             </ul>
         </nav>
-        <a class="cta header-link" href="login.html"><button class="header-button1">Login</button></a>
+        <a class="cta header-link" href="Authentication pages/login.html"><button class="header-button1">Login</button></a>
         <div class="toggle-button">
-            <i class="fa-solid fa-bars"></i> 
+            <!-- <i class="fa-solid fa-bars"></i>  -->
         </div>
-        <div class="dropdown-menu">
+        <!-- <div class="dropdown-menu">
             <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
             <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
             <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
-            <li class="header-lst-itm"><a class="cta header-link" href="#"><button class="header-button2">Contact</button></a></li>
-        </div>
+            <li class="header-lst-itm"><a class="cta header-link" href="Authentication pages/login.html"><button class="header-button2">Login</button></a></li>
+        </div> -->
     </header>   
+
 
 
     <form class="forget-form"  method="post" action="forget.html">
