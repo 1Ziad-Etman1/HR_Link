@@ -10,6 +10,7 @@
         <title>Nav bar</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="navBarStyle.css">
     </head>
     <body>
@@ -26,7 +27,7 @@
             <div class="toggle-button">
                 <i class="fa-solid fa-bars"></i> 
             </div>
-            <div class="dropdown-menu open">
+            <div class="dropdown-menu">
                 <li class="header-lst-itm"><a class="header-link" href="#">Services</a></li>
                 <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
                 <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
@@ -38,13 +39,15 @@
         <script>
             const toggleBtn = document.querySelector('.toggle-button')
             const toggleBtnIcon = document.querySelector('.toggle-button i')
-            const dropDownMenue = document.querySelector('.dropdown-menue')
+            const dropDownMenu = document.querySelector('.dropdown-menu')
 
             toggleBtn.onclick = function () {
-                dropDownMenue.classList.toggle = 'open'
-                const isOpen = dropDownMenue.classList.contains('open')
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
 
-                toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+                toggleBtnIcon.classList = isOpen 
+                ? 'fa-solid fa-xmark' 
+                : 'fa-solid fa-bars'
             }
         </script>
     </body>

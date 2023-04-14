@@ -6,9 +6,26 @@
 		<link rel="stylesheet" href="profiles.css">
 	</head>
 	<body class="profile-body">
-		<header class="profile-header">
-			<h1>Employee Profile</h1>
-		</header>
+		<header class="header">
+			<img class="header-logo" src="" alt="logo">
+			<nav>
+				<ul class="nav-links">
+					<li class="header-lst-itm"><a class="header-link" href="Authentication pages/login.html">Services</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				</ul>
+			</nav>
+			<a class="cta header-link" href="Authentication pages/login.html"><button class="header-button1">Log out</button></a>
+			<div class="toggle-button">
+				<i class="fa-solid fa-bars"></i> 
+			</div>
+			<div class="dropdown-menu">
+				<li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
+				<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+				<li class="header-lst-itm"><a class="cta header-link" href="Authentication pages/login.html"><button class="header-button2">Log out</button></a></li>
+			</div>
+		</header> 
 		
 		<main class="profile-main">
 			<section class="data">
@@ -34,5 +51,20 @@
 				<p>$10,000</p>
 			</section>
 		</main>
+
+		<script>
+            const toggleBtn = document.querySelector('.toggle-button')
+            const toggleBtnIcon = document.querySelector('.toggle-button i')
+            const dropDownMenu = document.querySelector('.dropdown-menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+                toggleBtnIcon.classList = isOpen 
+                ? 'fa-solid fa-xmark' 
+                : 'fa-solid fa-bars'
+            }
+        </script>
 	</body>
 </html>

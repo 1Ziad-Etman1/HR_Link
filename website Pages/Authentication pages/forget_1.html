@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
      <!-- <link rel="stylesheet" href="forget.css"> -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="stylesheet" href="Login_Create.css">
      <link rel="stylesheet" href="nav bar/navBarStyle.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +27,7 @@
         <div class="toggle-button">
             <i class="fa-solid fa-bars"></i> 
         </div>
-        <div class="dropdown-menu open">
+        <div class="dropdown-menu">
             <li class="header-lst-itm"> <a class="header-link" href="#">Services</a></li>
             <li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
             <li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
@@ -48,6 +50,19 @@
             <a class="forget-link" href="forget_2.html">Forget password </a>
     </form>
 
+    <script>
+        const toggleBtn = document.querySelector('.toggle-button')
+        const toggleBtnIcon = document.querySelector('.toggle-button i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
 
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+            ? 'fa-solid fa-xmark' 
+            : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>
