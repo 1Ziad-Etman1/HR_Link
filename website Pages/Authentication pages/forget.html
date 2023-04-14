@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" href="forget.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Login_Create.css">
+    <!-- <link rel="stylesheet" href="Login_Create.css"> -->
     <link rel="stylesheet" href="nav bar/navBarStyle.css">
     <link rel="stylesheet" href="../side_nav_bar/sideNavBar.css">
+    <link rel="stylesheet" href="Form new design/login.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forget Password</title>
@@ -56,24 +57,28 @@
 
 
 
-    <form class="forget-form "  method="post" action="login.html">
-        <h1>Create new password</h1>
+    <div class="wrapper">
+        <div class="form-box">
+            <h2>Create new password</h2>
+
+            <form class="forget-form "  method="post" action="login.html">
+                
+                <div class="section input-box">
+                    <label for="new-pass">Password</label>
+                    <input id = "new-pass" type = "text" name="new-pass" />   
+                </div>
         
-        <div class="section">
-            <label for="new-pass">Password</label>
-            <input id = "new-pass" type = "text" name="new-pass" placeholder = "new password"/>   
+                <div class="section input-box">
+                    <label for="confirm-new-pass">Confirm password</label>
+                    <input id = "confirm-new-pass" type = "text" name="ConfNewPass" />
+                </div>
+        
+                    <input class="submit submit-button" type="submit" value="submit">
+                
+            
+            </form>
         </div>
-
-        <div class="section">
-            <label for="confirm-new-pass">Confirm password</label>
-            <input id = "confirm-new-pass" type = "text" name="ConfNewPass" placeholder = "Confirm"/>
-        </div>
-
-        <div class="section">
-            <input class="submit" type="submit" value="submit">
-        </div>
-    
-    </form>
+    </div>
 
 
 

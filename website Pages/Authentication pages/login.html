@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="Login_Create.css">
         <link rel="stylesheet" href="nav bar/navBarStyle.css">
         <link rel="stylesheet" href="../side_nav_bar/sideNavBar.css">
+        <link rel="stylesheet" href="Form new design/login.css">
         <title>Login</title>
     </head>
 
@@ -52,7 +53,7 @@
 		</header>   
 
 
-        <form class="login-form" action="home.html">
+        <!-- <form class="login-form" action="home.html">
             <div class="section" class="box">
                 <label for="mail">Username: </label>
                 <input id="mail" type="email" required placeholder="Email Address">
@@ -68,7 +69,30 @@
             <a class="create-link" href="create.html">Create New Account</a>
             <br>
             <a class="forget-link" href="forget_1.html">Forget password</a>
-        </form>
+        </form> -->
+
+        <div class="wrapper">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i></i></span>
+                        <input type="email" name="email" id="" required>
+                       <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i></i></span>
+                        <input type="password" name="pass" id="" required>
+                       <label>Password</label>
+                    </div>
+                    <div class="remember-forget">
+                        <label><input type="checkbox" name="" id="">Remember me</label>
+                        <a href="#">Forget Password?</a>
+                    </div>
+                    <input class="submit-button" type="submit" value="Login">
+                </form>
+            </div>
+        </div>
     
         <!--  for the header -->
         <script>

@@ -6,10 +6,11 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
      crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <link rel="stylesheet" href="Login_Create.css">
+     <!-- <link rel="stylesheet" href="Login_Create.css"> -->
      <link rel="stylesheet" href="nav bar/navBarStyle.css">
      <link rel="stylesheet" href="../side_nav_bar/sideNavBar.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="Form new design/login.css">    
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forget Password 1</title>
 </head>
@@ -58,19 +59,22 @@
 
 
 
-
-    <form class="forget-form"  method="post" action="forget_2.html">
-        <h1 id = "Form-title">Forget Password</h1>
-        <div class = "section">
-            <label for="forget-password-email">Enter your registered email</label>
-            <input id ="forget-password-email" class = "Email" type = "email" placeholder = "Email Address"/>
+        <div class="wrapper">
+            <div class="form-box">
+                <h2>Forget Password</h2>
+                <form class="forget-form"  method="post" action="forget_2.html">
+                    <div class = "section input-box">
+                        <input id ="forget-password-email" class = "Email" type = "email" placeholder = "Email Address"/>
+                        <label for="forget-password-email">Enter your registered email</label>
+                    </div>
+            
+                    <input type="submit" class = "submit submit-button" value="submit">
+                    <br><br><br>
+                        <!-- <button onclick="showSpinner()">Reset Password</button> -->
+                        <a class="forget-link remember-forget" href="forget_2.html">Forget password </a>
+                </form>
+            </div>
         </div>
-
-        <input type="submit" class = "submit" value="submit">
-
-            <!-- <button onclick="showSpinner()">Reset Password</button> -->
-            <a class="forget-link" href="forget_2.html">Forget password </a>
-    </form>
 
     <script>
         const toggleBtn = document.querySelector('.toggle-button')
