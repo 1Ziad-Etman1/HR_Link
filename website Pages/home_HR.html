@@ -149,20 +149,7 @@
                 <button type="button" class="btn cancel" onclick="Close()">Close</button>
         </form>
         <script src="Main.js"></script>
-        <script>
-            const toggleBtn = document.querySelector('.toggle-button')
-            const toggleBtnIcon = document.querySelector('.toggle-button i')
-            const dropDownMenu = document.querySelector('.dropdown-menu')
-
-            toggleBtn.onclick = function () {
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
-
-                toggleBtnIcon.classList = isOpen 
-                ? 'fa-solid fa-xmark' 
-                : 'fa-solid fa-bars'
-            }
-        </script>
+        <script src="Authentication pages/nav bar/navBar.js"></script>
         </div>
         </body>
 </html>
