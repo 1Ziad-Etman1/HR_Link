@@ -1,11 +1,18 @@
 * {
+    margin:0;
     box-sizing: border-box;
+    padding:0;
 }
 
 body{
-    background: linear-gradient(#01012e,#572121);
+    /* background: linear-gradient(#01012e,#572121); */
+    background-color: #003049;
+    background-image: url(background.png) no-repeat;
+    /* background-repeat:  ; */
     height: 140vh;
 }
+
+
 
 .header-lst-itm, .header-link, .header-button1, .header-button2 {
     font-family: 'Times New Roman', Times, serif;
@@ -18,17 +25,22 @@ body{
 .header {
     display: flex;
     /* in the mid version space-between*/
-    justify-content: flex-end; 
+    justify-content: space-between; 
     align-items: center;
     padding: 30px 10%;
-    background-color: #24252A;
+    background-color: #091d26;
+
 }
 
 .header-logo {
     cursor: pointer;
     /* not in the mid version */
     margin-right: auto; 
-    height: 30px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    /* background-color: #0088a9; */
+    justify-self: flex-start;
 }
 
 .nav-links ,.header-lst-itm{

@@ -14,7 +14,10 @@
     </head>
     <body>
         <header class="header">
-            <img class="header-logo" src="" alt="logo">
+            <div class="logo">
+
+                <img class="header-logo" src="HR9.png" alt="logo">
+            </div>
             <nav>
                 <ul class="nav-links">
                     <li class="header-lst-itm"><a class="header-link" href="#">Services</a></li>
@@ -35,6 +38,19 @@
         </header>        
         
 
-        <script src="navBar.js"></script>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-button')
+const toggleBtnIcon = document.querySelector('.toggle-button i')
+const dropDownMenu = document.querySelector('.dropdown-menu')
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen 
+    ? 'fa-solid fa-xmark' 
+    : 'fa-solid fa-bars'
+}
+        </script>
     </body>
 </html>
