@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome HR</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="typewriter">
+        <h1 id="text">People are the heart of your business. Let us help you take care of them...</h1>
+      </div>
+
+      <script>
+         var i = 0;
+// var A = 0;
+    var tag = document.getElementById("text");
+    var html = document.getElementById("text").innerHTML;
+    var attr = tag.setAttribute("data", html);
+    var txt = tag.getAttribute("data");
+    var speed = 170;
+
+    function typeWriter() {
+      if (i <= txt.length) {
+        document.getElementById("text").innerHTML = txt.slice(0 , i + 1);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+        //console.log(document.getElementById("text").innerHTML);
+    }
+
+typeWriter();
+
+
+// function deltxt() {
+//      if (A <= txt.length) {
+    //      document.getElementById("text").innerHTML = txt.slice(0, -A);
+    //      A++;
+    //      setTimeout(deltxt, 50);
+    //    }
+    // }
+    // var backward = speed * txt.length + 1000   ;
+    // // console.log(backward);
+    // setTimeout( function () {
+    //  deltxt();
+    // },backward);
+      </script>
+</body>
+</html>

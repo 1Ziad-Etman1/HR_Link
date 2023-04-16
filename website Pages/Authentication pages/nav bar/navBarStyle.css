@@ -27,7 +27,7 @@ body{
     /* in the mid version space-between*/
     justify-content: space-between; 
     align-items: center;
-    padding: 30px 10%;
+    padding: 15px 10%;
     background-color: #091d26;
 
 }
@@ -36,11 +36,11 @@ body{
     cursor: pointer;
     /* not in the mid version */
     margin-right: auto; 
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    height: 70px;
+    width: 70px;
+    /* border-radius: 50px; */
     /* background-color: #0088a9; */
-    justify-self: flex-start;
+    /* justify-self: flex-start; */
 }
 
 .nav-links ,.header-lst-itm{
