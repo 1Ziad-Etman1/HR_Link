@@ -32,6 +32,7 @@ form.addEventListener('submit', function(e){
   }
   empolyees.push(empolyee);
   localStorage.setItem("empolyees", JSON.stringify(empolyees));
+  location.reload();
   // try {            
   //   empolyees.push(empolyee);
   //   localStorage.setItem("empolyees", JSON.stringify(empolyees));
