@@ -27,12 +27,20 @@
                 HR_Link
             </header>
             <ul>
-                <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-                <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
-                <li><a href="#"><i class="fas fa-circle-question"></i>About</a></li>
-                <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i>Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Log out</a></li>
+                <li><a href="home_HR.html"><i class="fas fa-qrcode"></i>Manage Page</a></li>
+                <li><a href="EmpTable.html"><i class="fas fa-stream"></i>Table of Employees </a></li>
+                <li><a href="about.html"><i class="fas fa-circle-question"></i>About</a></li>
+                <li><a href="services.html"><i class="fas fa-sliders-h"></i>Services</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+                <li><a id="logout-link" onclick="logoutUser()" href="Authentication pages/login.html"><i class="fa-solid fa-right-from-bracket"></i>Log out</a></li>
+                <script> 
+                    function logoutUser() {
+                        window.location.replace = "home_HR.html";
+                        history.pushState(null, null, location.href);
+                    }
+                </script>
+
+                
 
             </ul>
         </div>
@@ -41,9 +49,9 @@
 			<img class="header-logo" src="/website Pages/Authentication pages/HR9.png" alt="logo">
 			<nav>
 				<ul class="nav-links">
-					<li class="header-lst-itm"><a class="header-link" href="Authentication pages/login.html">Services</a></li>
-					<li class="header-lst-itm"><a class="header-link" href="#">Projects</a></li>
-					<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="services.html">Services</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="about.html">About</a></li>
+					<li class="header-lst-itm"><a class="header-link" href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 			<a class="cta header-link" href="Authentication pages/login.html"><button class="header-button1">Log out</button></a>
@@ -56,7 +64,7 @@
 				<li class="header-lst-itm"><a class="header-link" href="#">About</a></li>
 				<li class="header-lst-itm"><a class="cta header-link" href="Authentication pages/login.html"><button class="header-button2">Log out</button></a></li>
 			</div> -->
-		</header>   
+		</header>    
 
 
         <div class="d">
