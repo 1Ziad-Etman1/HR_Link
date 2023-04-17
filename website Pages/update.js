@@ -26,6 +26,7 @@ document.getElementById('autoBirthDate').value = autoFill.birthDate;
 // updadate the old data
 // get gender
 form.addEventListener('submit', function(e){
+    e.preventDefault();
     function getGender(){
         if (document.getElementById('autoMale').checked){
             return 'male';
@@ -49,11 +50,24 @@ form.addEventListener('submit', function(e){
     }
     
     // delet the autoFill from the local storage
-    empolyees.splice(empolyees.indexOf(autoFill), 1);
-    // localStorage.removeItem('autoFill');
-    localStorage.setItem("empolyees", JSON.stringify(empolyees));
-    // insert the new update at the local storage
-    empolyees.push(empolyee);
-    localStorage.setItem("empolyees", JSON.stringify(empolyees));
+    function checkEqual(empolyee){
+        return (
+            empolyee.name === autoFill.name &&
+            empolyee.id === autoFill.id &&
+            empolyee.email === autoFill.email)
+    }
+    for(let i = 0; i < empolyees.length; i++) {
+        if (checkEqual(empolyees[i])) {
+            empolyees.splice(i, 1);
+            localStorage.removeItem('autoFill')
+            empolyees.push(empolyee);
+            localStorage.setItem("empolyees", JSON.stringify(empolyees));
+        }
+    }
+    // empolyees.splice(empolyees.indexOf(autoFill), 1);;
+    // localStorage.setItem("empolyees", JSON.stringify(empolyees));
+    // // insert the new update at the local storage
+    // empolyees.push(empolyee);
+    // localStorage.setItem("empolyees", JSON.stringify(empolyees));
     
 })
