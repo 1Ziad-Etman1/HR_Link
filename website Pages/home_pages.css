@@ -14,6 +14,7 @@ body {
   /* background: opacity(0.1); */
   background-color: rgba(255, 255, 255, 0.001);
   /* opacity: 0.4; */
+  
 }
 
 * {
@@ -25,6 +26,7 @@ body {
 #addemp{
   text-decoration: none;
   color: #fff;
+  
 }
 
 header {
@@ -32,6 +34,7 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+ 
 }
 h1 {
   margin: 0;
@@ -42,15 +45,17 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px;
+  
 }
 article {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 8px rgba(8, 8, 8, 0.3);
   margin: 20px;
   padding: 40px;
   text-align: center;
   width: 500px;
+  
 }
 p {
   margin: 20px 0;
@@ -61,7 +66,7 @@ button {
   height: 60px;
   background: linear-gradient(#1392a59a, #ff660053);
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
@@ -78,14 +83,24 @@ button:hover {
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
-  position: fixed;
   text-align: center;
   bottom: 0;
   right: 40px;
   max-width: 340px;
   border: 3px solid #f1f1f1;
   background-color:white;
+  backdrop-filter: blur(10px);;
   z-index: 9;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  background: transparent;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Add styles to the form container */
@@ -96,11 +111,23 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  background: transparent;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  
 }
 
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 85%;
+  width: 75%;
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -109,40 +136,77 @@ button:hover {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #cccfeb;
+  border-radius: 20px;
 }
 
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+  margin: 30px;
+  border-radius: 20px;
 }
 
 .form-container input[type=submit] {
   width: 220px;
   height: 60px;
-  color: white ;
-  background: linear-gradient(#1392a59a, #ff660053);
+  /* font-family: Montserrat, sans-serif;
+    font-weight: 500; */
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid white;
+    border-top: 1px solid white;
+  background: linear-gradient(105.2deg, rgb(173, 120, 42) 11.2%, rgb(185, 149, 99) 117.9%);
   align-self: center;
   border: none;
-  border-radius: 6px;
+  border-radius: 20px;
+  text-shadow: 2px 4px rgba(137, 98, 204, 0.4);
+  box-shadow: 10px 10px 60px -8px rgba(255, 255, 255, 0.2);
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
+  width: 220px;
+  height: 60px;
+  /* font-family: Montserrat, sans-serif;
+    font-weight: 500; */
   color: white;
-  padding: 16px 20px;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid white;
+    border-top: 1px solid white;
+  background: linear-gradient(105.2deg, rgb(173, 120, 42) 11.2%, rgb(185, 149, 99) 117.9%);
+  align-self: center;
   border: none;
-  cursor: pointer;
-  width: 85%;
-  margin-bottom:10px;
-  opacity: 0.8;
+  border-radius: 20px;
+  text-shadow: 2px 4px rgba(137, 98, 204, 0.4);
+  box-shadow: 10px 10px 60px -8px rgba(255, 255, 255, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  width:220px;
+  height: 60px;
+  /* font-family: Montserrat, sans-serif;
+    font-weight: 500; */
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  background: radial-gradient(circle at 10% 20%, rgb(208, 89, 109) 0%, rgb(231, 156, 118) 90%);
+  align-self: center;
+  border: none;
+  border-radius: 20px;
+  text-shadow: 2px 4px rgba(137, 98, 204, 0.4);
+  box-shadow: 10px 10px 60px -8px rgba(255, 255, 255, 0.2);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Add some hover effects to buttons */
@@ -154,6 +218,7 @@ button:hover {
   height: 40px;
   width: 140px;
   margin-top: -8px;
+  border-radius: 20px;
   background-color: rgba(0, 136, 169, 1) !important;
 
 }
@@ -179,6 +244,7 @@ button:hover {
   font-size: 35px;
   justify-self: flex-start;
   text-align: left;
+  border-radius: 20px;
 }
 
 .open-button:hover {

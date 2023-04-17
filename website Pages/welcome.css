@@ -3,21 +3,36 @@
   *{
     margin: 0;
   }
+
+  @font-face {
+    font-family: nos;
+    src: url(font/CarlGauss_PERSONAL_USE_ONLY.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+    color: white;
+}
+
   body{
     background: #3AAFA9;
   color: white;box-shadow: inset -53px -41px 198px #379E99, inset 95px -2px 200px #379e99;
-display:flex;align-items:center;height:100vh;justify-content: center;
+display:flex;align-items:center;height:100vh;justify-content: center;flex-direction: column;
   }
   .typewriter {
     font-family: 'Anonymous Pro', monospace;
     width: 70%;  
   }
   h1 {
+    font-family: nos;
     overflow: hidden;
     margin: 0 auto;
     display: inline-block;
-        font-weight: normal;
-
+    font-weight: normal;
+    text-align: center;
+    
   }
   h1:after{
    content: '';
@@ -27,6 +42,39 @@ display:flex;align-items:center;height:100vh;justify-content: center;
     height: 25px;
     width: 4px;
     animation: cursor 0.4s infinite;
+  }
+
+  h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    margin: 0 auto;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(1, 19, 37, 0.5);    color: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    backdrop-filter: blur(5px);
+  }
+
+  .imaage {
+    width: 400px;
+    height: 400px;
+    background-image: url();
   }
 
   /* The typewriter cursor effect */
